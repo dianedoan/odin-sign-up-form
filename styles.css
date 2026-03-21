@@ -8,7 +8,9 @@
 }
 
 :root {
-    --sidebar-width: 30vw;
+    --left-panel-width: 30vw;
+    --right-panel-width: 70vw;
+    --right-panel-padding: 70px;
 }
 
 body {
@@ -33,12 +35,15 @@ h1 {
     background: url(./images/sidebar.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    width: var(--sidebar-width);
+    width: var(--left-panel-width);
 }
 
 .right {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    width: var(--right-panel-width);
+    background-color: rgb(241, 241, 241);
 }
 
 .logo-bar {
@@ -50,7 +55,7 @@ h1 {
     top: 20%;
     background-color: rgba(0, 0, 0, 0.3);
     height: 100px;
-    width: var(--sidebar-width);
+    width: var(--left-panel-width);
     padding: 12px 0px;
 }
 
@@ -65,7 +70,7 @@ h1 {
 }
 
 .photo-credit {
-    width: var(--sidebar-width);
+    width: var(--left-panel-width);
     text-align: center;
     position: absolute;
     bottom: 1%;
@@ -75,4 +80,36 @@ h1 {
 
 .photo-credit a {
     color: white;
+}
+
+header {
+    width: 50%;
+    padding: var(--right-panel-padding);
+}
+
+form {
+    background-color: white;
+    box-shadow: 2px 5px 5px rgb(199, 199, 199);
+}
+
+form h2 {
+    padding: 0px 70px;
+}
+
+fieldset {
+    border-style: none;
+    padding: 0 70px;
+    padding-bottom: 30px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
