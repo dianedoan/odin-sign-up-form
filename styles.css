@@ -10,7 +10,10 @@
 :root {
     --left-panel-width: 30vw;
     --right-panel-width: 70vw;
-    --right-panel-padding: 70px;
+    --right-panel-padding: 60px;
+    --button-color: #596d48;
+    --input-border-color: #e5e7eb;
+    --form-text-color: #343436;
 }
 
 body {
@@ -23,13 +26,16 @@ h1 {
     font-family: 'norsebold', sans-serif;
 }
 
+h2 {
+    font-size: 1.3rem;
+}
+
 .main-container {
     display: flex;
     flex-direction: row;
     width: 100vw;
     height: 100vh;
 }
-
 
 .left {
     background: url(./images/sidebar.jpg);
@@ -84,22 +90,19 @@ h1 {
 
 header {
     width: 50%;
-    padding: var(--right-panel-padding);
-}
-
-form {
-    background-color: white;
-    box-shadow: 2px 5px 5px rgb(199, 199, 199);
-}
-
-form h2 {
-    padding: 0px 70px;
+    padding: 0 var(--right-panel-padding);
 }
 
 fieldset {
+    background-color: white;
+    box-shadow: 2px 5px 5px rgb(199, 199, 199);
     border-style: none;
-    padding: 0 70px;
-    padding-bottom: 30px;
+    padding: 10px var(--right-panel-padding);
+    margin: 30px 0;
+}
+
+fieldset h2 {
+    color: var(--form-text-color);
 }
 
 .form-row {
@@ -108,8 +111,62 @@ fieldset {
     flex-wrap: wrap;
 }
 
+.form-row:last-child {
+    padding-bottom: 20px;
+}
+
 .form-item {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    padding-right: var(--right-panel-padding);
+    padding-bottom: 20px;
+}
+
+.form-item label {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 2px;
+    color: var(--form-text-color);
+}
+
+.form-item input {
+    border: 1px solid var(--input-border-color);
+    border-radius: 3px;
+    font-size: 1rem;
+    padding: 10px;
+    outline: none;
+    width: 250px;
+    height: 12px;
+}
+
+.form-item input:focus {
+    border: 1px solid blue;
+}
+
+.form-item input[type='password']:invalid {
+    border: 1px solid red;
+}
+
+form button {
+    background-color: var(--button-color);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 16px 50px;
+    margin: 10px 0 0 var(--right-panel-padding);
+}
+
+.login-link {
+    padding: 0 var(--right-panel-padding);
+    padding-top: 30px;
+    font-size: 16px;
+}
+
+.login-link a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--button-color);
 }
