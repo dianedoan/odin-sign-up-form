@@ -14,6 +14,7 @@
     --button-color: #596d48;
     --input-border-color: #e5e7eb;
     --form-text-color: #2e2e30;
+    --form-shadow: 2px 5px 5px #e5e7eb;
 }
 
 body {
@@ -95,7 +96,7 @@ header {
 
 fieldset {
     background-color: white;
-    box-shadow: 2px 5px 5px rgb(199, 199, 199);
+    box-shadow: var(--form-shadow);
     border-style: none;
     padding: 10px var(--right-panel-padding);
     margin: 30px 0;
@@ -142,6 +143,7 @@ fieldset h2 {
 
 .form-item input:focus {
     border: 1px solid blue;
+    box-shadow: var(--form-shadow);
 }
 
 .form-item input[type='password']:invalid {
